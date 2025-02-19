@@ -1,23 +1,21 @@
-Graph Implementation
+# Graph Implementation
 
-Overview
+## Overview
+This project provides a simple implementation of an **Undirected Graph** in Java using an **Adjacency List**. It allows users to create a graph, add vertices, add edges, and display the structure of the graph.
 
-This project provides a simple implementation of an Undirected Graph in Java using an Adjacency List. It allows users to create a graph, add vertices, add edges, and display the structure of the graph.
+## Features
 
-Features
+- Add vertices to the graph
+- Add edges between vertices (undirected)
+- Display the graph structure
 
-Add vertices to the graph
+## Implementation
 
-Add edges between vertices (undirected)
+The core implementation uses a **HashMap** to store the adjacency list, where each key represents a vertex, and its corresponding value is a list of adjacent vertices. The graph supports adding new vertices and edges dynamically.
 
-Display the graph structure
+### Core of the Code
 
-Implementation
-
-The core implementation uses a HashMap to store the adjacency list, where each key represents a vertex, and its corresponding value is a list of adjacent vertices. The graph supports adding new vertices and edges dynamically.
-
-Core of the Code
-
+```java
 package repo.graph;
 
 import java.util.*;
@@ -46,43 +44,54 @@ public class graph {
         }
     }
 }
+```
 
-Usage
+## Usage
 
-1. Creating a Graph
+### 1. Creating a Graph
 
+```java
 graph myGraph = new graph();
+```
 
-2. Adding Vertices
+### 2. Adding Vertices
 
+```java
 myGraph.addVertex(1);
 myGraph.addVertex(2);
+```
 
-3. Adding Edges
+### 3. Adding Edges
 
+```java
 myGraph.addEdge(1, 2);
 myGraph.addEdge(2, 3);
+```
 
-4. Displaying the Graph
+### 4. Displaying the Graph
 
+```java
 myGraph.display();
+```
 
-Example Output
+## Example Output
 
+```
 Graph representation:
 1 -> [2, 3]
 2 -> [1, 3]
 3 -> [2, 1]
+```
 
-Notes
+## Notes
 
-The graph is undirected, meaning edges are bidirectional.
+- The graph is **undirected**, meaning edges are bidirectional.
+- The adjacency list is stored using a **HashMap**.
+- Vertices and edges must be added before display.
 
-The adjacency list is stored using a HashMap.
-
-Vertices and edges must be added before display.
-
-License
+## License
 
 This project is open-source and free to use.
+
+
 
